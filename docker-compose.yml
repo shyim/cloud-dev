@@ -1,0 +1,29 @@
+version: '3.9'
+services:
+  docker:
+    image: docker:dind
+    privileged: true
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./home:/home/dev
+    entrypoint: ['dockerd', '--host=tcp://0.0.0.0:2375', '--host=unix:///var/run/docker.sock', '--tls=false']
+  desktop:
+    env_file:
+      - .env
+    shm_size: '1g'
+    hostname: 'phpstorm'
+    cap_add:
+      - SYS_PTRACE
+    build:
+      context: desktop
+    volumes:
+      - ./home:/home/dev
+      - nix:/nix
+      - nx:/usr/NX/etc
+    ports:
+      - 4000:4000
+volumes:
+  nix:
+  nx:

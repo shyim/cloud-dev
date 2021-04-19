@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[C]=/home/dev/Apps/PhpStorm/bin/phpstorm.png
+Name[C]=PhpStorm
+Exec=/home/dev/Apps/PhpStorm/bin/phpstorm.sh
+Name=PhpStorm
+Icon=/home/dev/Apps/PhpStorm/bin/phpstorm.png
