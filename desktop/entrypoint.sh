@@ -35,5 +35,9 @@ if [[ ! -e /home/dev/Code ]]; then
   mkdir /home/dev/Code
 fi
 
+chown -R dev /home/dev/.config/bash/
+chown -R dev /home/dev/.local/share/applications
+chown -R dev /home/dev/.bashrc
+
 /etc/NX/nxserver --startup
 tail -f /usr/NX/var/log/nxserver.log
