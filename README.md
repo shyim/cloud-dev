@@ -48,7 +48,7 @@ Over the years I have tested many ways to do that. Here all my tested tools so f
   - Works, but not very smooth makes no fun to develop in it
   - Can run Cypress GUI
   
-- Desktop with NoMachine inside Container
+- Desktop with NoMachine inside Container (**this repository**)
   - Own Infrastructure
   - Freedom of Linux GUI
   - Install that IDE you want with other Desktop tools
