@@ -63,6 +63,7 @@ This repository contains my NoMachine configuration.
 - Docker-Compose
 - An wildcard Domain
 - Reverse Proxy
+- [NoMachine Client](https://www.nomachine.com/en) on your PC or buy NoMachine Enterprise Desktop with WebGUI
 
 
 ## Installation
