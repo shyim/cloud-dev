@@ -14,7 +14,7 @@ My personal Cloud Development environment for developing Shopware with NoMachine
 Over the years I have tested many ways to do that. Here all my tested tools so far
 
 - Github Code Spaces
-  - Limitied to their Hardware and pricing
+  - Limited to their Hardware and pricing
   - Only VSCode
   - Currently only 2 Instances per account
   - No X-Server (No Cypress GUI)
@@ -30,7 +30,7 @@ Over the years I have tested many ways to do that. Here all my tested tools so f
   - Pretty instable and very laggy in some scenarios. Hopefully an good competitor in future for VSCode in Browser
   - No X-Server (No Cypress GUI)
   
-- XServer Fowarding
+- XServer Forwarding
   - Locally running XServer and forwarding it into the Server
   - It's pretty laggy even with 3ms Ping to external Server
   
@@ -38,7 +38,7 @@ Over the years I have tested many ways to do that. Here all my tested tools so f
   - Service or Own Kubernetes Infrastructure
   - Knowledge of Kubernetes
   - You still need an IDE locally and your Code will be synchronized into the Cloud Container
-  - With many Files like Shopware the synchronizatation take time and slows down quickly working
+  - With many Files like Shopware the synchronization take time and slows down quickly working
   - Can run Cypress GUI
   
 - Desktop inside Container with VNC, TeamViewer, AnyDesk access
@@ -85,14 +85,14 @@ This repository contains my NoMachine configuration.
 
 We have two docker containers:
   - dini (Docker)
-    - Runs an seperate Docker to not stop the current container it self and be little bit isolated
+    - Runs an separate Docker to not stop the current container it self and be little bit isolated
   - desktop
     - Runs Mate Desktop with NoMachine at port 4000
     - Has Nix package manager to installing other packages
     - Uses the dini docker
     
 I usally use only PhpStorm inside NoMachine and use my normal browser outside. 
-To archive this we need on the Host an Reverse Proxy like nginx/ traefik which redirects the dini container.
+To archive this we need on the Host an Reverse Proxy like nginx/traefik which redirects the dini container.
 
 ### Network Flow
 
@@ -192,11 +192,11 @@ expires 1y;
 ```
 
 
-### Example Traefik Labels (recommanded)
+### Example Traefik Labels (recommended)
 
 Variables:
   - `shy.ovh`: Replace it with your Domain
-  - The TLS options are using currently hetzner DNS for getting the SSL Cert. Replace it with your own
+  - The TLS options are using currently Hetzner DNS for getting the SSL Cert. Replace it with your own
   - The middleware is an ipWhitelist
 
 ```yaml
