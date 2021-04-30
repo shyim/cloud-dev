@@ -156,8 +156,8 @@ server {
 
 location ~* ^.+\.(?:css|cur|js|jpe?g|gif|ico|png|svg|webp|html)$ {
 expires 1y;
-        add_header Cache-Control "public";
-   proxy_pass http://172.18.0.4:80;
+    add_header Cache-Control "public";
+    proxy_pass http://172.18.0.4:80;
     proxy_http_version 1.1;
 
     proxy_set_header Upgrade $http_upgrade;
