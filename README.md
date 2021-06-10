@@ -69,6 +69,7 @@ This repository contains my NoMachine configuration.
 ## Installation
 
 - Copy `.env.dist` to `.env` and change the password
+- Copy `docker-compose.yml.dist` to `docker-compose.yml` and adjust the content if necessary
 - Start the containers with `docker-compose up -d`
 - Install NoMachine Client or buy NoMachine Enterprise Desktop for Web Client
 - Connect to NoMachine `<server-ip>:4000` with user `dev` and your given password
