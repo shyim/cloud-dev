@@ -1,9 +1,9 @@
-FROM debian:stretch-slim
+FROM ubuntu:21.04
 
 ENV DOCKER_HOST=tcp://docker:2375 \
     DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && apt-get install --no-install-recommends -y mate-desktop-environment-core mate-desktop-environment mate-indicator-applet curl xorg vim ca-certificates unzip zip bash-completion vim xterm sudo xz-utils
+RUN apt-get update && apt-get install --no-install-recommends -y mate-desktop-environment-core mate-desktop-environment mate-indicator-applet curl xorg vim ca-certificates unzip zip bash-completion vim xterm sudo xz-utils locales xdg-utils firefox
 
 ENV DOCKERVERSION=20.10.7
 RUN curl -fsSLO https://download.docker.com/linux/static/stable/x86_64/docker-${DOCKERVERSION}.tgz && \
