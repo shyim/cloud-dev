@@ -24,7 +24,7 @@ if [[ ! -e /home/dev/Apps/ ]]; then
         sudo -u dev bash -c 'source /home/dev/.nix-profile/etc/profile.d/nix.sh;git clone https://github.com/shyim/shopware-docker.git /home/dev/Apps/shopware-docker'
 
         cd /home/dev/Apps/
-        curl https://download-cf.jetbrains.com/webide/PhpStorm-2021.1.1.tar.gz -o phpstorm.tar.gz
+        curl https://download-cf.jetbrains.com/webide/PhpStorm-2021.1.4.tar.gz -o phpstorm.tar.gz
         tar xf phpstorm.tar.gz
         rm phpstorm.tar.gz
         mv PhpStorm* PhpStorm
