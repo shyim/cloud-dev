@@ -27,7 +27,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
 	apt-get clean && \
     apt-get autoclean
 
-RUN curl -fSL "https://apt.iteas.at/iteas/pool/main/n/nomachine/nomachine_7.9.2_1_amd64.deb" -o nomachine.deb && \
+RUN curl -fSL "https://apt.iteas.at/iteas/pool/main/n/nomachine/nomachine_8.10.1_1_amd64.deb" -o nomachine.deb && \
     dpkg -i nomachine.deb && sed -i "s|#EnableClipboard both|EnableClipboard both |g" /usr/NX/etc/server.cfg && \
     rm nomachine.deb && \
     mv /usr/NX/etc /usr/NX/etc-preinstalled
