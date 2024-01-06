@@ -2,6 +2,8 @@
 
 if [[ ! -e /usr/NX/etc/server.cfg ]]; then
   mv /usr/NX/etc-preinstalled/* /usr/NX/etc/
+  chown nx:root /usr/NX/etc
+  chown nx:root /usr/NX/etc/sshstatus
 fi
 
 groupadd -r dev -g 443 \
@@ -25,7 +27,7 @@ if [[ ! -e /home/dev/Apps/ ]]; then
         sudo -u dev bash -c 'source /home/dev/.nix-profile/etc/profile.d/nix.sh;git clone https://github.com/shyim/shopware-docker.git /home/dev/Apps/shopware-docker'
 
         cd /home/dev/Apps/
-        curl https://download-cdn.jetbrains.com/webide/PhpStorm-2023.1.tar.gz -o phpstorm.tar.gz
+        curl https://download-cdn.jetbrains.com/webide/PhpStorm-2023.3.2.tar.gz -o phpstorm.tar.gz
         tar xf phpstorm.tar.gz
         rm phpstorm.tar.gz
         mv PhpStorm* PhpStorm
@@ -40,5 +42,7 @@ chown -R dev /home/dev/.config/bash/
 chown -R dev /home/dev/.local/share/applications
 chown -R dev /home/dev/.bashrc
 
-/etc/NX/nxserver --startup
+/usr/NX/bin/nxserver --install
+/usr/NX/bin/nxserver --startup
+
 tail -f /usr/NX/var/log/nxserver.log
