@@ -24,7 +24,6 @@ fi
 if [[ ! -e /home/dev/Apps/ ]]; then
         mkdir -p /home/dev/Apps/shopware-docker
         chown -R dev /home/dev/Apps/
-        sudo -u dev bash -c 'source /home/dev/.nix-profile/etc/profile.d/nix.sh;git clone https://github.com/shyim/shopware-docker.git /home/dev/Apps/shopware-docker'
 
         cd /home/dev/Apps/
         curl https://download-cdn.jetbrains.com/webide/PhpStorm-2024.1.tar.gz -o phpstorm.tar.gz
