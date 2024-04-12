@@ -17,7 +17,7 @@ if [[ -e /home/dev/.nix-profile/etc/profile.d/nix.sh ]]; then
 else
   chown -R dev /nix
   sudo -u dev bash -c 'sh <(curl -L https://nixos.org/nix/install) --no-daemon'
-  sudo -u dev bash -c 'source /home/dev/.nix-profile/etc/profile.d/nix.sh; nix-env -iA nixpkgs.git nixpkgs.docker nixpkgs.docker-compose nixpkgs.jq nixpkgs.dialog nixpkgs.cachix'
+  sudo -u dev bash -c 'source /home/dev/.nix-profile/etc/profile.d/nix.sh; nix-env -iA nixpkgs.git nixpkgs.docker nixpkgs.docker-compose nixpkgs.jq nixpkgs.dialog nixpkgs.cachix nixpkgs.shopware-cli nixpkgs.openssh nixpkgs wget
   sudo -u dev bash -c 'source /home/dev/.nix-profile/etc/profile.d/nix.sh; cachix use devenv; nix-env -if https://github.com/cachix/devenv/tarball/latest'
 fi
 
